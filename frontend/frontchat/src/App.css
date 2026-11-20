@@ -109,6 +109,75 @@
   flex: 1;
 }
 
+/* Chevron expand/collapse */
+.sidebar-chevron {
+  font-size: 16px;
+  font-weight: 300;
+  color: #9ca3af;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sidebar-chevron.open {
+  transform: rotate(90deg);
+}
+
+/* Grup wrapper */
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sub-items container */
+.sidebar-subitems {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 2px 0 4px 0;
+  padding: 0 6px 0 20px;
+  border-left: 2px solid #fca5a5;
+  margin-left: 18px;
+}
+
+/* Tiap pertanyaan di sub-item */
+.sidebar-subitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 5px 6px;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 12px;
+  line-height: 1.45;
+  transition: background 0.12s, color 0.12s;
+  width: 100%;
+}
+
+.sidebar-subitem:hover {
+  background: #fef2f2;
+  color: #c0392b;
+}
+
+.subitem-dot {
+  flex-shrink: 0;
+  color: #fca5a5;
+  margin-top: 1px;
+  font-size: 10px;
+}
+
+.subitem-text {
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .sidebar-footer {
   padding: 14px 14px 18px;
   border-top: 1px solid #e5e7eb;

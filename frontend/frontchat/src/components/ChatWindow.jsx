@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef, useImperativeHandle } from "react";
 import { cariJawaban } from "../utils/chatEngine";
 import { KATEGORI_LIST } from "../data/faqData";
 
@@ -46,6 +46,8 @@ function BubbleBot({ msg, onRekomendasi }) {
               </div>
             )}
           </>
+        ) : hasil.status === "error" ? (
+          <p className="bubble-answer not-found">⚠️ {hasil.pesan}</p>
         ) : (
           <p className="bubble-answer not-found">{hasil.pesan}</p>
         )}
@@ -63,7 +65,7 @@ function BubbleUser({ text }) {
   );
 }
 
-export default function ChatWindow({ kategoriFilter }) {
+export default forwardRef(function ChatWindow({ kategoriFilter }, ref) {
   const [messages, setMessages] = useState([
     {
       id: 0,
@@ -85,11 +87,16 @@ export default function ChatWindow({ kategoriFilter }) {
   const kategoriLabel =
     KATEGORI_LIST.find((k) => k.id === kategoriFilter)?.label || "Semua Topik";
 
+  // Expose kirimDariLuar ke parent (App.jsx) via ref
+  useImperativeHandle(ref, () => ({
+    kirimDariLuar: (teks) => kirim(teks),
+  }));
+
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  function kirim(teks) {
+  async function kirim(teks) {
     const q = teks || input.trim();
     if (!q || loading) return;
     setInput("");
@@ -100,13 +107,21 @@ export default function ChatWindow({ kategoriFilter }) {
     setMessages((prev) => [...prev, userMsg, typingMsg]);
     setLoading(true);
 
-    // Simulasi delay bot (200–600ms)
-    setTimeout(() => {
-      const hasil = cariJawaban(q, kategoriFilter);
+    try {
+      const hasil = await cariJawaban(q, kategoriFilter);
       const botMsg = { id: Date.now() + 2, from: "bot", type: "answer", hasil };
       setMessages((prev) => [...prev.filter((m) => m.type !== "typing"), botMsg]);
+    } catch {
+      const botMsg = {
+        id: Date.now() + 2,
+        from: "bot",
+        type: "answer",
+        hasil: { status: "error", pesan: "Terjadi kesalahan. Pastikan backend berjalan di port 8000." },
+      };
+      setMessages((prev) => [...prev.filter((m) => m.type !== "typing"), botMsg]);
+    } finally {
       setLoading(false);
-    }, 400 + Math.random() * 300);
+    }
   }
 
   function handleKey(e) {
@@ -184,4 +199,4 @@ export default function ChatWindow({ kategoriFilter }) {
       </div>
     </div>
   );
-}
+});
