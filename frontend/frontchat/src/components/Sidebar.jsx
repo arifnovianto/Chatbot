@@ -1,10 +1,6 @@
-import { TOPIK_LIST } from "../data/sidebarContent";
-
-export default function Sidebar({ aktif, onPilih }) {
+export default function Sidebar({ topikList, aktif, onPilih }) {
   return (
     <aside className="sidebar">
-
-      {/* Header */}
       <div className="sidebar-header">
         <div className="sidebar-header-logo">🏛️</div>
         <div>
@@ -13,10 +9,9 @@ export default function Sidebar({ aktif, onPilih }) {
         </div>
       </div>
 
-      {/* Nav menu */}
       <div className="sidebar-toc-title">Topik Panduan</div>
       <nav className="sidebar-nav">
-        {TOPIK_LIST.map((item) => (
+        {topikList.map((item) => (
           <button
             key={item.id}
             className={`sidebar-item ${aktif === item.id ? "aktif" : ""}`}
@@ -29,7 +24,6 @@ export default function Sidebar({ aktif, onPilih }) {
         ))}
       </nav>
 
-      {/* Footer */}
       <div className="sidebar-footer">
         <div className="sidebar-footer-title">Butuh bantuan lain?</div>
         <a href="mailto:helpdesk@atrbpn.go.id" className="sidebar-link">
@@ -39,7 +33,6 @@ export default function Sidebar({ aktif, onPilih }) {
           🌐 bantuan.atrbpn.go.id
         </a>
       </div>
-
     </aside>
   );
 }

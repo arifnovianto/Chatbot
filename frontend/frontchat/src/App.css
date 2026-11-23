@@ -1,4 +1,32 @@
 /* ═══════════════════════════════════════════════════════════
+   LOADING SCREEN
+═══════════════════════════════════════════════════════════ */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.loading-screen.error { color: #c0392b; }
+.loading-screen code { background: #f3f4f6; padding: 2px 8px; border-radius: 4px; }
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #fca5a5;
+  border-top-color: #c0392b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ═══════════════════════════════════════════════════════════
    LAYOUT
 ═══════════════════════════════════════════════════════════ */
 .app-layout {
@@ -483,7 +511,9 @@
   right: 28px;
   z-index: 199;
   width: 380px;
-  height: 560px;
+  /* Tinggi maksimal agar tidak keluar layar atas */
+  height: min(560px, calc(100vh - 110px));
+  max-height: calc(100vh - 110px);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   overflow: hidden;
@@ -730,9 +760,11 @@
   .faq-hero-title { font-size: 20px; }
 
   .chat-popup {
-    right: 12px; bottom: 80px;
+    right: 12px;
+    bottom: 76px;
     width: calc(100vw - 24px);
-    height: 70vh;
+    height: min(70vh, calc(100vh - 96px));
+    max-height: calc(100vh - 96px);
   }
 
   .fab-btn { right: 16px; bottom: 20px; }

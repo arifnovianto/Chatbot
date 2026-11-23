@@ -1,24 +1,67 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import KontenUtama from "./components/KontenUtama";
 import ChatWindow from "./components/ChatWindow";
 import "./App.css";
 
+const BASE_URL = "http://localhost:8000";
+
 export default function App() {
-  const [topikAktif, setTopikAktif] = useState("beranda");
-  const [chatOpen, setChatOpen] = useState(false);
+  const [topikList, setTopikList]   = useState([]);
+  const [kontenMap, setKontenMap]   = useState({});
+  const [topikAktif, setTopikAktif] = useState(null);
+  const [loading, setLoading]       = useState(true);
+  const [chatOpen, setChatOpen]     = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const chatRef = useRef(null);
 
+  // Fetch konten dari backend saat pertama load
+  useEffect(() => {
+    fetch(`${BASE_URL}/konten`)
+      .then((r) => r.json())
+      .then((data) => {
+        // Buat map id → objek konten untuk lookup cepat
+        const map = {};
+        data.forEach((item) => { map[item.id] = item; });
+        setTopikList(data);
+        setKontenMap(map);
+        setTopikAktif(data[0]?.id ?? null);
+        setLoading(false);
+      })
+      .catch(() => {
+        // Fallback kalau backend belum jalan
+        setTopikList([]);
+        setLoading(false);
+      });
+  }, []);
+
   function handleTanya(pertanyaan) {
     setChatOpen(true);
+    setSidebarOpen(false);
     setTimeout(() => chatRef.current?.kirimDariLuar(pertanyaan), 100);
+  }
+
+  if (loading) {
+    return (
+      <div className="loading-screen">
+        <div className="loading-spinner" />
+        <p>Memuat konten...</p>
+      </div>
+    );
+  }
+
+  if (topikList.length === 0) {
+    return (
+      <div className="loading-screen error">
+        <p>⚠️ Tidak dapat terhubung ke server.</p>
+        <p>Pastikan backend berjalan di <code>http://localhost:8000</code></p>
+      </div>
+    );
   }
 
   return (
     <div className="app-layout">
 
-      {/* Mobile overlay */}
       {sidebarOpen && (
         <div className="overlay" onClick={() => setSidebarOpen(false)} />
       )}
@@ -26,6 +69,7 @@ export default function App() {
       {/* ── Sidebar kiri ── */}
       <div className={`sidebar-wrapper ${sidebarOpen ? "open" : ""}`}>
         <Sidebar
+          topikList={topikList}
           aktif={topikAktif}
           onPilih={(id) => { setTopikAktif(id); setSidebarOpen(false); }}
         />
@@ -33,17 +77,15 @@ export default function App() {
 
       {/* ── Konten tengah ── */}
       <div className="main-wrapper">
-
-        {/* Mobile topbar */}
         <div className="mobile-topbar">
           <button className="hamburger" onClick={() => setSidebarOpen(true)}>☰</button>
           <span className="mobile-title">🏛️ Bantuan ATR/BPN</span>
         </div>
 
-        <KontenUtama topikId={topikAktif} />
+        <KontenUtama konten={kontenMap[topikAktif]} />
       </div>
 
-      {/* ── FAB Chatbot kanan bawah ── */}
+      {/* ── FAB Chatbot ── */}
       <button
         className={`fab-btn ${chatOpen ? "fab-open" : ""}`}
         onClick={() => setChatOpen((v) => !v)}

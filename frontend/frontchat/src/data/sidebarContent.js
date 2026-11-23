@@ -165,6 +165,10 @@ export const KONTEN_TOPIK = {
         judul: "Aktivasi akses HT-el",
         isi: "Tidak semua akun PPAT otomatis memiliki akses ke layanan HT-el. Jika menu HT-el tidak muncul atau APHT tidak bisa diajukan:\n• Pastikan data sertifikat objek jaminan sudah ter-mapping di sistem HT-el.\n• Pastikan akun PPAT sudah diaktifkan sebagai pengguna layanan HT-el.\n• Periksa apakah data kreditur sudah sesuai dengan data lembaga di sistem OJK.\n\nUntuk aktivasi, hubungi Kantor Pertanahan setempat.",
       },
+      {
+        judul: "Kemerdekaan Indonesia",
+        isi: "indonesia merdeka pada 17 agustus 1945:\n• Presiden IR.Soekarno.\n• wakilnya bernama Muhammad Hatta \n•",
+      },
     ],
   },
 
