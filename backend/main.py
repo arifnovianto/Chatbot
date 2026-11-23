@@ -55,11 +55,30 @@ def root():
 
 @app.get("/categories", tags=["Info"])
 def get_categories():
-    """
-    Kembalikan daftar semua kategori FAQ yang tersedia.
-    Dipakai frontend untuk render menu sidebar.
-    """
     return {"kategori": engine.get_categories()}
+
+
+@app.get("/konten", tags=["Info"])
+def get_konten():
+    """
+    Kembalikan seluruh konten artikel dari konten.json.
+    Dipakai frontend untuk render sidebar dan halaman utama.
+    """
+    return engine.get_konten()
+
+
+@app.post("/reload", tags=["Admin"])
+def reload_konten():
+    """
+    Reload konten.json tanpa restart server.
+    Panggil endpoint ini setelah edit konten.json.
+    """
+    total = engine.reload()
+    return {
+        "status": "berhasil",
+        "pesan": f"Konten berhasil di-reload. Total dokumen: {total}.",
+        "total": total,
+    }
 
 
 @app.post("/chat", tags=["Chat"])

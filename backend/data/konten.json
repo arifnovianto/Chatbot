@@ -1,0 +1,226 @@
+[
+  {
+    "id": "beranda",
+    "icon": "🏠",
+    "label": "Beranda",
+    "judul": "FAQ PPAT — Portal Mitra Kerja ATR/BPN",
+    "subjudul": "Halaman ini memuat panduan teknis yang paling sering dibutuhkan oleh Pejabat Pembuat Akta Tanah (PPAT) dalam penggunaan Portal Mitra Kerja Kementerian ATR/BPN.",
+    "seksi": [
+      {
+        "judul": "Apa itu Portal Mitra PPAT?",
+        "isi": "Portal Mitra PPAT adalah aplikasi berbasis web yang disediakan oleh Kementerian ATR/BPN untuk mendukung tugas PPAT secara digital. Melalui portal ini, PPAT dapat membuat dan mengelola akta, mengajukan peralihan hak, mendaftarkan Hak Tanggungan, serta melaporkan kegiatan pertanahan secara elektronik tanpa harus datang langsung ke Kantor Pertanahan."
+      },
+      {
+        "judul": "Siapa yang bisa mengakses portal ini?",
+        "isi": "Portal ini diperuntukkan bagi PPAT yang telah diangkat secara resmi oleh Menteri ATR/BPN dan memiliki SK Pengangkatan yang masih berlaku. Staf kantor PPAT juga dapat diberikan akses terbatas atas izin PPAT yang bersangkutan."
+      },
+      {
+        "judul": "Bagaimana cara memulai menggunakan portal?",
+        "isi": "Untuk mulai menggunakan portal, PPAT harus memiliki akun SSO yang didaftarkan melalui Kantor Pertanahan setempat. Setelah mendapat kredensial, login di Portal SSO ATR/BPN menggunakan email dan password yang diberikan, lalu ganti password sementara dengan password baru yang aman."
+      }
+    ]
+  },
+  {
+    "id": "akun",
+    "icon": "🔐",
+    "label": "Akun, Kredensial & Autentikasi",
+    "judul": "Akun, Kredensial & Autentikasi",
+    "subjudul": "Panduan lengkap mengelola akun Portal SSO PPAT — mulai dari pendaftaran, login, OTP, hingga penanganan akun terblokir.",
+    "seksi": [
+      {
+        "judul": "Cara mendapatkan akun Portal SSO",
+        "isi": "Akun Portal SSO PPAT dibuat oleh petugas Kantor Pertanahan setempat berdasarkan data SK Pengangkatan PPAT yang masih aktif. PPAT cukup datang ke Kantor Pertanahan dengan membawa SK Pengangkatan asli dan dokumen identitas. Petugas akan mendaftarkan akun dan mengirimkan kredensial awal berupa email dan password sementara ke email resmi PPAT."
+      },
+      {
+        "judul": "Mengapa akun tidak bisa login ke Portal SSO?",
+        "isi": "Ada beberapa kemungkinan penyebab akun Mitra PPAT tidak bisa login ke Portal SSO. Pertama, masa berlaku SK Pengangkatan atau SK Perpanjangan sudah habis. Kedua, data PPAT belum diperbarui di sistem Ditjen Penetapan Hak dan Pendaftaran Tanah. Ketiga, password salah atau akun dalam status terkunci. Keempat, akun terblokir akibat terlalu banyak percobaan login yang gagal. Solusi: pastikan SK masih aktif, verifikasi data ke Kantor Pertanahan, dan gunakan fitur Lupa Password jika lupa kata sandi."
+      },
+      {
+        "judul": "Cara reset password akun PPAT",
+        "isi": "Reset password dapat dilakukan mandiri melalui halaman login Portal SSO. Klik tombol Lupa Password di halaman login, masukkan alamat email yang terdaftar, buka email masuk dan klik tautan reset yang dikirimkan, lalu buat password baru yang kuat minimal 8 karakter kombinasi huruf dan angka. Tautan reset password hanya berlaku selama 24 jam. Jika sudah kedaluwarsa, ulangi proses dari awal."
+      },
+      {
+        "judul": "Kode OTP tidak masuk saat login",
+        "isi": "Kode OTP dikirimkan ke nomor HP yang terdaftar di akun. Jika tidak masuk, pastikan nomor HP yang terdaftar masih aktif dan memiliki sinyal. Tunggu hingga 60 detik sebelum meminta pengiriman ulang. Klik Kirim Ulang OTP untuk meminta kode baru. Jika nomor HP sudah berganti, hubungi Kantor Pertanahan untuk memperbarui data nomor HP di sistem."
+      },
+      {
+        "judul": "Akun terblokir setelah gagal login",
+        "isi": "Akun akan otomatis terblokir setelah 5 kali percobaan login yang gagal secara berturut-turut sebagai langkah keamanan sistem. Langkah penanganan: tunggu 30 menit karena sistem akan membuka blokir secara otomatis. Jika setelah 30 menit masih terblokir, ajukan permintaan buka blokir melalui Helpdesk ATR/BPN dengan menyertakan nama lengkap, nomor SK, dan alamat email terdaftar."
+      },
+      {
+        "judul": "Cara mengubah nomor HP terdaftar di akun PPAT",
+        "isi": "Perubahan nomor HP yang terdaftar di akun PPAT harus dilakukan melalui Kantor Pertanahan setempat. Datang dengan membawa identitas diri dan SK PPAT aktif. Petugas akan memperbarui data nomor HP di sistem SSO portal."
+      }
+    ]
+  },
+  {
+    "id": "akta",
+    "icon": "📄",
+    "label": "Pembuatan Akta & Validasi",
+    "judul": "Pembuatan Akta & Validasi Data",
+    "subjudul": "Panduan teknis membuat akta melalui portal, melakukan validasi data pihak dan sertifikat, serta mengatasi error yang umum terjadi.",
+    "seksi": [
+      {
+        "judul": "Alur pembuatan akta di portal PPAT",
+        "isi": "Pembuatan akta melalui Portal Mitra PPAT mengikuti alur berikut. Login ke portal menggunakan akun SSO. Pilih menu Pembuatan Akta dan tentukan jenis akta yang akan dibuat. Masukkan data bidang tanah karena nomor sertifikat akan divalidasi otomatis ke database BPN. Masukkan data pihak penjual atau pembeli karena NIK akan divalidasi ke database Dukcapil. Periksa dan konfirmasi seluruh data. Unduh draft akta dalam format PDF untuk ditandatangani."
+      },
+      {
+        "judul": "Format nomor hak yang benar di portal",
+        "isi": "Penulisan nomor hak di portal harus mengikuti format standar yaitu Kode Kabupaten atau Kota diikuti titik Kode Kecamatan diikuti titik Jenis Hak diikuti titik Nomor Urut. Contohnya 3273.010.SHM.00123 di mana 3273 adalah kode Kota Bandung, 010 adalah kode kecamatan, SHM adalah jenis hak Sertifikat Hak Milik, dan 00123 adalah nomor urut. Pastikan tidak ada spasi, titik ekstra, atau karakter khusus lainnya."
+      },
+      {
+        "judul": "Nomor sertifikat tidak ditemukan saat validasi",
+        "isi": "Jika nomor sertifikat tidak ditemukan saat validasi, kemungkinan penyebabnya adalah data sertifikat belum ter-digitasi ke sistem BPN, atau sertifikat diterbitkan oleh kantor pertanahan yang berbeda, atau terdapat kesalahan penulisan nomor maupun kode wilayah. Solusi: konfirmasikan kebenaran nomor sertifikat dan kode wilayah ke Kantor Pertanahan penerbit sertifikat tersebut."
+      },
+      {
+        "judul": "Error validasi NIK pihak di portal",
+        "isi": "Error validasi NIK terjadi ketika NIK yang dimasukkan tidak ditemukan atau tidak sesuai di database Dukcapil. Penyebab umum adalah NIK diinput tidak lengkap atau ada kesalahan angka, atau KTP yang digunakan sudah tidak aktif, atau data kependudukan belum diperbarui di Dukcapil setempat. Solusi: pastikan menggunakan NIK dari KTP aktif dan periksa ulang angka satu per satu."
+      },
+      {
+        "judul": "Cara mencetak draft akta dari portal",
+        "isi": "Draft akta dapat dicetak melalui menu Daftar Akta. Buka menu tersebut, temukan akta berdasarkan nomor atau tanggal, lalu klik tombol Unduh Draft PDF. Jika tombol unduh tidak berfungsi, pastikan browser mengizinkan pop-up dari domain portal, gunakan Chrome atau Firefox versi terbaru, dan nonaktifkan sementara ekstensi pemblokir pop-up."
+      },
+      {
+        "judul": "Data bidang tanah tidak muncul di portal",
+        "isi": "Jika data bidang tanah tidak muncul di portal, kemungkinan data bidang belum terpetakan ke wilayah kerja PPAT atau terdapat kesalahan kode wilayah. Hubungi petugas Kantor Pertanahan untuk memastikan bidang tanah telah terdaftar dan terpetakan dengan benar di sistem."
+      }
+    ]
+  },
+  {
+    "id": "peralihan",
+    "icon": "🔄",
+    "label": "Peralihan Hak Elektronik",
+    "judul": "Peralihan Hak Elektronik & Pembayaran",
+    "subjudul": "Panduan mengajukan permohonan peralihan hak tanah secara elektronik, melakukan pembayaran melalui kode billing SPS, dan memantau status permohonan.",
+    "seksi": [
+      {
+        "judul": "Apa itu peralihan hak elektronik?",
+        "isi": "Peralihan hak elektronik adalah layanan yang memungkinkan PPAT mengajukan permohonan balik nama, pewarisan, hibah, dan jenis peralihan hak lainnya secara daring melalui Portal Mitra tanpa harus menyerahkan berkas fisik langsung ke loket Kantor Pertanahan."
+      },
+      {
+        "judul": "Langkah-langkah pengajuan peralihan hak elektronik",
+        "isi": "Cara mengajukan peralihan hak secara elektronik adalah sebagai berikut. Login ke portal mitra PPAT. Pilih menu Layanan Elektronik lalu Peralihan Hak. Pilih jenis peralihan yang sesuai. Isi formulir dan unggah dokumen persyaratan. Sistem akan menerbitkan kode billing SPS untuk pembayaran. Lakukan pembayaran sesuai kode billing. Status permohonan dapat dipantau di menu Tracking Permohonan."
+      },
+      {
+        "judul": "Dokumen persyaratan peralihan hak",
+        "isi": "Dokumen yang wajib disiapkan untuk peralihan hak elektronik adalah sertifikat asli bidang tanah yang dialihkan, akta PPAT terkait seperti jual beli hibah atau waris, KTP seluruh pihak yang terlibat, bukti pembayaran BPHTB yaitu Bea Perolehan Hak atas Tanah dan Bangunan, bukti pembayaran PPh Final untuk transaksi jual beli, surat pernyataan sesuai jenis peralihan, dan dokumen tambahan sesuai ketentuan Kantor Pertanahan setempat."
+      },
+      {
+        "judul": "Kode billing SPS tidak muncul di portal",
+        "isi": "Kode billing SPS akan digenerate otomatis setelah semua data formulir terisi lengkap dan valid. Jika tidak muncul, periksa kembali apakah semua field wajib sudah diisi dan pastikan status permohonan bukan lagi berstatus Draft. Muat ulang halaman dan cek kembali. Jika masalah berlanjut kemungkinan sistem SPS sedang dalam pemeliharaan dan disarankan menghubungi Helpdesk."
+      },
+      {
+        "judul": "Berapa lama proses peralihan hak dan cara tracking",
+        "isi": "Proses peralihan hak elektronik umumnya diselesaikan dalam 5 sampai 7 hari kerja setelah berkas dinyatakan lengkap dan valid oleh petugas Kantor Pertanahan. Waktu dapat bervariasi tergantung antrean masing-masing kantor. Untuk memantau status gunakan menu Tracking Permohonan dengan memasukkan nomor berkas. Notifikasi perubahan status juga dikirim otomatis ke email terdaftar."
+      },
+      {
+        "judul": "Surat pengantar berkas peralihan hak tidak bisa dicetak",
+        "isi": "Surat pengantar tidak bisa dicetak biasanya karena status permohonan belum diverifikasi oleh petugas atau koneksi internet tidak stabil saat proses generate dokumen. Periksa status di menu Tracking dan coba cetak ulang setelah status berubah menjadi Siap Cetak."
+      }
+    ]
+  },
+  {
+    "id": "kendala",
+    "icon": "🛠️",
+    "label": "Pelaporan Kendala Teknis",
+    "judul": "Pelaporan Kendala Teknis Portal",
+    "subjudul": "Cara melaporkan masalah teknis yang ditemui saat menggunakan Portal Mitra PPAT, termasuk saluran pengaduan dan informasi layanan Helpdesk.",
+    "seksi": [
+      {
+        "judul": "Saluran pelaporan kendala teknis portal",
+        "isi": "Kendala teknis portal dapat dilaporkan melalui beberapa saluran. Pertama melalui Tiket Pengaduan ANDALAS di dalam portal. Kedua melalui email helpdesk@atrbpn.go.id. Ketiga melalui media sosial resmi @kementerian_atrbpn. Keempat langsung ke Kantor Pertanahan setempat untuk kendala yang memerlukan tindakan langsung. Saat melapor sertakan tangkapan layar error, deskripsi langkah yang sudah dilakukan, dan nomor akun PPAT."
+      },
+      {
+        "judul": "Cara mengajukan tiket pengaduan ANDALAS",
+        "isi": "ANDALAS adalah sistem pengaduan resmi layanan pertanahan digital ATR/BPN. Langkah pengajuan adalah login ke portal lalu buka menu Tiket Pengaduan, klik Buat Tiket Baru, pilih kategori masalah yang sesuai, deskripsikan kendala secara detail dan spesifik, lampirkan tangkapan layar jika ada, kemudian klik Kirim. Nomor tiket akan dikirimkan ke email untuk keperluan pemantauan tindak lanjut."
+      },
+      {
+        "judul": "Jam layanan Helpdesk ATR/BPN",
+        "isi": "Helpdesk ATR/BPN melayani pertanyaan dan pengaduan pada hari Senin sampai Jumat pukul 08.00 hingga 16.00 WIB. Dapat dihubungi melalui email helpdesk@atrbpn.go.id atau portal bantuan di bantuan.atrbpn.go.id. Di luar jam kerja laporan tetap dapat disampaikan melalui email atau ANDALAS dan akan ditindaklanjuti pada hari kerja berikutnya."
+      },
+      {
+        "judul": "Panduan pengguna portal mitra PPAT",
+        "isi": "Panduan lengkap penggunaan Portal Mitra PPAT tersedia dalam format PDF dan dapat diunduh melalui menu Bantuan lalu Unduh Panduan di dalam portal, atau melalui halaman bantuan.atrbpn.go.id pada bagian Tanya Jawab dan artikel panduan teknis yang diperbarui secara berkala oleh tim ATR/BPN."
+      }
+    ]
+  },
+  {
+    "id": "ht",
+    "icon": "🏦",
+    "label": "Hak Tanggungan Elektronik",
+    "judul": "Hak Tanggungan Elektronik (HT-el)",
+    "subjudul": "Layanan pendaftaran Hak Tanggungan secara daring yang terintegrasi di Portal Mitra ATR/BPN — tanpa perlu datang ke Kantor Pertanahan.",
+    "seksi": [
+      {
+        "judul": "Apa itu Hak Tanggungan Elektronik HT-el?",
+        "isi": "Hak Tanggungan Elektronik atau HT-el adalah sistem pendaftaran Hak Tanggungan berbasis digital yang memungkinkan PPAT mendaftarkan Akta Pembebanan Hak Tanggungan atau APHT dan Surat Kuasa Membebankan Hak Tanggungan atau SKMHT secara daring. Layanan ini diatur dalam Peraturan Menteri ATR/BPN Nomor 5 Tahun 2020 dan bertujuan mempercepat proses pendaftaran serta mengurangi interaksi fisik di loket Kantor Pertanahan."
+      },
+      {
+        "judul": "Cara mendaftarkan Hak Tanggungan secara elektronik",
+        "isi": "Langkah pendaftaran Hak Tanggungan Elektronik adalah sebagai berikut. Login ke Portal Mitra PPAT. Pilih menu Hak Tanggungan Elektronik. Isi data debitur atau pihak peminjam, kreditur atau bank dan lembaga, serta objek jaminan. Unggah APHT yang telah ditandatangani dan dokumen pendukung lainnya. Sistem akan menghitung dan menerbitkan kode billing PNBP. Lakukan pembayaran PNBP sesuai kode billing. Pantau status pendaftaran secara real-time di portal."
+      },
+      {
+        "judul": "Biaya PNBP pendaftaran HT-el",
+        "isi": "Biaya Penerimaan Negara Bukan Pajak atau PNBP untuk pendaftaran HT-el dihitung secara otomatis oleh sistem berdasarkan nilai tanggungan yang dicantumkan dalam APHT sesuai tarif yang diatur dalam Peraturan Pemerintah tentang PNBP Kementerian ATR/BPN. Untuk simulasi biaya gunakan kalkulator PNBP yang tersedia di halaman formulir HT-el sebelum melakukan pengajuan resmi."
+      },
+      {
+        "judul": "APHT tidak bisa diajukan secara elektronik",
+        "isi": "APHT tidak bisa diajukan secara elektronik biasanya karena data sertifikat belum ter-mapping di sistem HT-el, atau PPAT belum terdaftar sebagai pengguna layanan HT-el, atau terdapat ketidaksesuaian data kreditur dengan data lembaga di sistem OJK. Untuk aktivasi akses HT-el hubungi Kantor Pertanahan setempat."
+      },
+      {
+        "judul": "Perbedaan APHT dan SKMHT",
+        "isi": "APHT atau Akta Pembebanan Hak Tanggungan adalah akta yang langsung membebankan hak tanggungan atas objek jaminan. Sedangkan SKMHT atau Surat Kuasa Membebankan Hak Tanggungan adalah surat kuasa dari pemilik tanah kepada kreditur untuk memasang hak tanggungan, yang digunakan apabila APHT belum bisa langsung dibuat pada saat itu."
+      }
+    ]
+  },
+  {
+    "id": "kjksb",
+    "icon": "🤝",
+    "label": "KJKSB",
+    "judul": "KJKSB — Kegiatan Jual-beli, Kredit, Sewa-menyewa & Berbagi",
+    "subjudul": "Layanan pencatatan transaksi pertanahan berbasis digital untuk meningkatkan transparansi dan pengawasan transaksi properti nasional.",
+    "seksi": [
+      {
+        "judul": "Apa itu KJKSB?",
+        "isi": "KJKSB adalah singkatan dari Kegiatan Jual-beli, Kredit, Sewa-menyewa, dan Berbagi. Ini adalah kewajiban pelaporan yang harus dilakukan PPAT setiap kali membuat akta yang berkaitan dengan keempat jenis kegiatan tersebut. Tujuannya adalah menciptakan sistem monitoring transaksi pertanahan yang transparan dan dapat diawasi secara nasional oleh Kementerian ATR/BPN."
+      },
+      {
+        "judul": "Cara melaporkan transaksi KJKSB di portal",
+        "isi": "Pelaporan KJKSB dilakukan melalui portal dengan langkah berikut. Login ke Portal Mitra PPAT. Buka menu KJKSB. Pilih jenis kegiatan yaitu Jual-beli, Kredit, Sewa-menyewa, atau Berbagi. Isi data pihak-pihak yang terlibat dan objek tanah. Lampirkan akta atau perjanjian terkait. Submit laporan. Pelaporan wajib dilakukan dalam jangka waktu yang ditentukan setelah akta dibuat."
+      },
+      {
+        "judul": "Dokumen yang diperlukan untuk pelaporan KJKSB",
+        "isi": "Dokumen yang dibutuhkan untuk pelaporan KJKSB adalah KTP atau paspor seluruh pihak yang terlibat dalam transaksi, sertifikat tanah yang menjadi objek transaksi, akta atau perjanjian yang dibuat oleh PPAT, bukti pembayaran pajak terkait seperti BPHTB PPh dan PPN jika ada, serta dokumen tambahan sesuai jenis kegiatan yang dilaporkan."
+      },
+      {
+        "judul": "Apakah pelaporan KJKSB wajib dan apa sanksinya?",
+        "isi": "Pelaporan KJKSB bersifat wajib bagi PPAT. Keterlambatan atau kelalaian dalam pelaporan dapat berdampak pada catatan kepatuhan PPAT di sistem pengawasan ATR/BPN dan berpotensi dikenai sanksi administratif sesuai ketentuan yang berlaku. Pastikan selalu melaporkan setiap transaksi tepat waktu."
+      }
+    ]
+  },
+  {
+    "id": "kkpr",
+    "icon": "🗺️",
+    "label": "KKPR Non Berusaha & Stranas",
+    "judul": "KKPR Non Berusaha & Stranas",
+    "subjudul": "Informasi tentang Kesesuaian Kegiatan Pemanfaatan Ruang untuk non-usaha dan program Strategi Nasional pertanahan Reforma Agraria.",
+    "seksi": [
+      {
+        "judul": "Apa itu KKPR Non Berusaha?",
+        "isi": "KKPR Non Berusaha atau Kesesuaian Kegiatan Pemanfaatan Ruang untuk Non Usaha adalah persetujuan resmi dari pemerintah yang menyatakan bahwa suatu kegiatan non-komersial sesuai dengan tata ruang wilayah setempat. Contoh kegiatan yang memerlukan KKPR Non Berusaha adalah pembangunan rumah tinggal oleh perorangan, pembangunan fasilitas sosial atau keagamaan, dan kegiatan pertanian skala kecil oleh petani."
+      },
+      {
+        "judul": "Cara mengajukan KKPR Non Berusaha",
+        "isi": "Permohonan KKPR Non Berusaha diajukan secara daring melalui portal OSS atau Online Single Submission di oss.go.id atau melalui Dinas Penanaman Modal dan PTSP setempat. Peran PPAT dalam proses ini adalah membantu klien menyiapkan dokumen teknis pertanahan seperti peta bidang tanah, surat kepemilikan, dan data koordinat lokasi yang diperlukan dalam proses pengajuan."
+      },
+      {
+        "judul": "Apa itu Stranas dalam pertanahan ATR/BPN?",
+        "isi": "Stranas atau Strategi Nasional dalam konteks pertanahan merujuk pada program prioritas nasional bidang pertanahan yang dikoordinasikan oleh Kementerian ATR/BPN sebagai bagian dari agenda Reforma Agraria. Program Stranas mencakup redistribusi tanah yaitu pembagian tanah kepada masyarakat yang berhak, legalisasi aset yaitu penerbitan sertifikat tanah bagi tanah yang belum bersertifikat, penyelesaian konflik agraria melalui mediasi, serta penataan kawasan dan pengakuan tanah ulayat."
+      },
+      {
+        "judul": "Peran PPAT dalam program Stranas",
+        "isi": "PPAT yang wilayah kerjanya masuk dalam lokus program Stranas dapat berkontribusi melalui beberapa cara. Melaporkan transaksi pertanahan terkait objek redistribusi melalui menu Laporan Stranas di portal. Membantu masyarakat dalam proses legalisasi aset dengan membuatkan akta yang diperlukan. Berkoordinasi dengan Kantor Pertanahan setempat untuk memastikan data transaksi tercatat dalam sistem Stranas."
+      }
+    ]
+  }
+]
