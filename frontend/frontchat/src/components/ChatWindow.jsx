@@ -65,7 +65,7 @@ function BubbleUser({ text }) {
   );
 }
 
-export default forwardRef(function ChatWindow({ kategoriFilter }, ref) {
+export default forwardRef(function ChatWindow({ kategoriFilter, onClose }, ref) {
   const [messages, setMessages] = useState([
     {
       id: 0,
@@ -146,6 +146,9 @@ export default forwardRef(function ChatWindow({ kategoriFilter }, ref) {
         </div>
         <div className="chat-header-right">
           <span className="header-badge">FAQ PPAT</span>
+          {onClose && (
+            <button className="chat-close-btn" onClick={onClose} title="Tutup">✕</button>
+          )}
         </div>
       </div>
 
